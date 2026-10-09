@@ -52,7 +52,7 @@ Two API changes come with that newer ref, and both are silent until the compiler
 - **`IDataService` no longer declares `deregister`**, so `override` on it fails with "function has
   override specified but does not override anything". Declare it in your own interface instead.
 
-Worked example: `nightswatchhq/chain-integration-ds`.
+Worked example: `nuthatch-org/chain-integration-ds`.
 
 ## A payer must authorize their own key before signing anything (2026-08-29)
 
@@ -88,7 +88,7 @@ collector.authorizeSigner(payer, proofDeadline, proof);
 Note the two conventions in one contract: **the agreement is EIP-712, this proof is a plain
 `eth_sign`.** Producing the wrong one gives bytes the contract rejects without explaining why.
 
-`weaver authorize-proof` ([nightswatchhq/weaver](https://github.com/nightswatchhq/weaver)) emits the
+`weaver authorize-proof` ([nuthatch-org/weaver](https://github.com/nuthatch-org/weaver)) emits the
 proof and the matching `cast send`.
 
 **And the meta-lesson, which is the more useful half.** This survived a run where every negative
@@ -143,7 +143,7 @@ vm.expectRevert(IRecurringCollector.RecurringCollectorInvalidSigner.selector);
 
 ## horizon-core (proxy archetype) notes
 
-- Dependency: `horizon-core = { git = "https://github.com/nightswatchhq/horizon-core", branch = "main" }`.
+- Dependency: `horizon-core = { git = "https://github.com/nuthatch-org/horizon-core", branch = "main" }`.
   Consider pinning a tag/rev for reproducibility once core stabilises.
 - The whole gateway is `horizon_core::run(Config::load()?)`. Config path comes from
   `$GATEWAY_CONFIG` (defaults to `gateway.toml`).
