@@ -166,7 +166,7 @@ The harness carries the four traps below so you do not rediscover them: Controll
 addresses with a proxy-versus-implementation size check, the signer authorisation, a provision at a
 thawing period the protocol will accept, and an escrow deposit. It was written by extracting three
 rehearsals that each re-derived the same setup, and it is exercised against deployed Sepolia
-contracts in `nightswatchhq/chain-integration-ds`.
+contracts in `nuthatch-org/chain-integration-ds`.
 
 Four things that stop a collection, all of which cost a day each to find:
 
